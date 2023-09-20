@@ -1,3 +1,6 @@
 
 *.csv
+*.pyc
 /venv
+/conf.py
+

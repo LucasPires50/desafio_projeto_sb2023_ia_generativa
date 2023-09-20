@@ -12,7 +12,7 @@ def get_last_10_users():
         if response.status_code == 200:
             data = response.json()
             # Limita a quantidade de resultados a 10
-            limited_data = data[:10]
+            limited_data = data[:3]
             return limited_data
         else:
             return f"Erro na solicitação: Código de status {response.status_code}"

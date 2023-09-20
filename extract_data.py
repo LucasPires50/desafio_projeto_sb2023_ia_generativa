@@ -7,7 +7,6 @@ df = pd.read_csv('SDW2023.csv')
 
 # Pegar os dados que estão na coluna "UserID" e retorna em uma lista
 user_ids = df['UserID'].to_list()
-print(user_ids)
 
 def get_user(id):
     url = f'https://sdw-2023-prd.up.railway.app/users/{id}'
@@ -30,4 +29,4 @@ o que pode tornar o código mais conciso e legível em algumas situações.
 users = [user for id in user_ids if (user := get_user(id)) is not None]
 
 # Imprimir o resultado formatado
-print(json.dumps(users, indent=2))
+# print(json.dumps(users, indent=2))
