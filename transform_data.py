@@ -29,3 +29,7 @@ users = [user for id in user_ids if (user := get_user(id)) is not None]
 for user in users:
     news = generate_ai_news(user)
     print(news)
+    user['news'].append({
+        "icon": "https://digitalinnovationone.github.io/santander-dev-week-2023-api/icons/credit.svg",
+        "description": news
+    })
